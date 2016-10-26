@@ -191,7 +191,7 @@ installtask() {
 				PHPLIB="/var/lib/php"
 				PHPSVC="php7.0-fpm"
 			fi
-			if [[ ${dist_id} == "Debian" ]]; then
+			if [[ (${dist_id} == "Debian") || (${dist_id} == "Rasbian") ]]; then
 				if [[ ${dist_codename} == "jessie" ]]; then
 					if [[ ${httpd_platform} == "apache2" ]]; then
 						WEBSERVER_BACKEND="apache2 apache2-utils libapache2-mod-${PHP}"
